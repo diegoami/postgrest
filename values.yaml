@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: postgrest
+  repository: europe-west1-docker.pkg.dev/gbucket-on-gke/postgrest/postgrest:latest 
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
