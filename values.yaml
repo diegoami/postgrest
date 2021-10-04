@@ -5,7 +5,9 @@
 replicaCount: 1
 
 image:
-  repository: europe-west1-docker.pkg.dev/gbucket-on-gke/postgrest/postgrest:latest 
+  registry: gcr.io
+  repository: gcr.io/bitnami-cluster-327717/postgrest/postgrest
+  tag: 0.0.1
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
