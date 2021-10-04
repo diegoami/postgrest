@@ -52,4 +52,11 @@ psql -U postrgres # pwd postgres
 \dt
 ```
 
+### TEST POSTGREST
 
+```
+export POD_NAME=$(kubectl get pods --namespace default -l "app.kubernetes.io/name=postgrest,app.kubernetes.io/instance=postgrest" -o jsonpath="{.items[0].metadata.name}")
+kubectl port-forward $POD_NAME 3000:3000
+curl http://localhost:3000/country\?select\=name,continent,region\&name\=eq.Estonia
+
+```
