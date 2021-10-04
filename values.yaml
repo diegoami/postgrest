@@ -601,4 +601,7 @@ postgresql:
       timeoutSeconds: 5
       failureThreshold: 6
       successThreshold: 1
+extraEnvVars:
+  - name: PGRST_DB_URI 
+    value: "postgres://postgres:postgres@postgrest-postgresql:5432/public"
     

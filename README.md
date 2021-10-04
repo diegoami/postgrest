@@ -38,3 +38,18 @@ gcloud container clusters get-credentials bitnami-gke-cluster
 helm dependency build
 helm install postgrest . 
 ```
+
+### CONNECT
+
+```
+kubectl get pods
+kubectl get services
+```
+
+```
+kubectl exec  -it postgrest-postgresql-0 bash
+psql -U postrgres # pwd postgres
+\dt
+```
+
+
